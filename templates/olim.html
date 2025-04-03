@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiada</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <a href="{{ url_for('index') }}" class="btn">Volver al inicio🏠</a>
+    <h1>Nueva Olimpiada en Londres</h1>
+    <h2>Implementan nuevas reglas..</h2>
+    <p class="desc_olim">El mundo presenció el nacimiento de una nueva era olímpica en Londres, 
+    con reglas que transformaron la esencia del evento.
+    Las competiciones dejaron atrás los límites tradicionales para adoptar desafíos impredecibles,
+    como circuitos de atletismo que cambiaban diariamente y equipos compuestos por atletas de múltiples países.
+    Además, la inclusión del público como "Atletas Ciudadanos" marcó un hito, 
+    acercando las olimpiadas a la gente como nunca antes. Estas reformas no solo modernizaron el deporte, 
+    sino que también celebraron la diversidad y la creatividad.</p>
+    <img src="{{ url_for('static', filename='img/olim.jpg') }}" alt="">
+</body>
+</html>

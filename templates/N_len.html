@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo lenguaje</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <a href="{{ url_for('index') }}" class="btn">Volver al inicio🏠</a>
+    <h1 class="n_len">Un Nuevo Lenguaje de Programación</h1>
+    <h2>¿El Fin o el Comienzo de una Era?</h2>
+    <p class="desc_nlen">Un innovador lenguaje de programación ha sido desarrollado, 
+        prometiendo transformar la manera en que se crea software. 
+        Con mayor automatización y accesibilidad, 
+        este avance plantea interrogantes sobre el futuro: 
+        ¿una etapa de progreso creativo o nuevos desafíos éticos y técnicos? 
+        El desarrollo tecnológico nunca será el mismo.</p>
+    <img src="{{ url_for('static', filename='img/nlen.jpg') }}" alt="">
+</body>
+</html>

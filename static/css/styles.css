@@ -1,0 +1,340 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Añadir espacio entre los artículos */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+    border-bottom: 3px solid white; /* Línea inferior */
+}
+
+.title_page {
+    flex-grow: 100px; /* Hace que el título ocupe el espacio disponible */
+    text-align: center; /* Asegura que el título quede alineado a la izquierda */
+    border-top: 3px solid white; /* Línea superior */
+    border-bottom: solid white; /* Línea inferior */
+    padding: 5px 0; /* Espaciado arriba y abajo */
+    font-size: 40px;
+    width: 100%;
+
+}
+
+.navegation {
+    display: flex;
+    gap: 10px; /* Espacio entre los elementos */
+    list-style: none;
+}
+.noticia {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+.noticia img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+
+        font-family: Arial, sans-serif;
+        background-image: url("../img/fond.png"); /* Ruta de la imagen */
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: #ffffff;
+        line-height: 1.6;
+        padding: 20px;
+
+    
+}
+
+.title {
+    text-shadow: 1px 1px 5px #000000; /* Sombra sutil */
+}
+
+/* Estilo para los enlaces del menú */
+.title{ 
+    color: #fff; /* Cambia el color de los enlaces a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.title:hover {
+    color: #00cf26; /* Cambia el color cuando pasas el cursor (efecto hover) */
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
+}
+
+h1 {
+    background-color: black; /* Fondo negro */
+    color: white; /* Letras blancas */
+    text-align: center;
+    padding: 20px 0; /* Aumenta el espacio arriba y abajo */
+    border-top: 3px solid white; /* Línea superior blanca */
+    border-bottom: 3px solid white; /* Línea inferior blanca */
+    width: 100%; /* Ancho completo */
+}
+.ded {
+
+    background-color: #000000;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 2;
+
+}
+img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.cuer {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    line-height: 2;
+}
+.page {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    padding: 15px;
+    width: 41%;
+    border: 1px solid #000000;
+}
+.desc {
+    background-color: rgba(169, 169, 169, 0.8);
+    color: white; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 80%; /* Ancho ajustado */
+    margin: 0 auto; /* Centra el cuadro */
+    text-align: center; /* Centra el texto */
+    font-size: 20px; /* Tamaño de letra más grande */
+    font-weight: bold; /* Opcional: hace las letras más gruesas */
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Hace que ambas noticias tengan la misma altura */
+    gap: 15px; /* Espacio entre las noticias */
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px; /* Espacio entre noticias */
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo para que no se estiren demasiado */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.post {
+    width: 47%; /* Ajusta el ancho sin que se hagan tan grandes */
+    border: 1px solid #000000;
+    padding: 15px;
+    background-color: rgba(169, 169, 169, 0.8);
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px; /* Ajusta la altura mínima */
+    max-height: 400px; /* Evita que crezcan demasiado */
+    overflow: hidden; /* Evita que el contenido haga crecer las tarjetas */
+}
+
+.post img {
+    max-width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción original */
+    border-radius: 5px;
+    align-self: center;
+    object-fit: contain; /* Asegura que la imagen completa se vea sin cortes */
+    max-height: 200px; /* Evita que la imagen sea demasiado grande */
+}
+
+
+.title {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.date {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.excerpt {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.postt {
+    width: 48px; /* Cada noticia ocupa el 40% del ancho */
+    background-color: rgba(169, 169, 169, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    
+}
+
+.back {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background-color: #444;
+}
+
+.large-post {
+    width: 100%; /* La noticia grande ocupará toda la fila */
+    text-align: center;
+}
+.desc_olim {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    line-height: 2;
+}
+
+.desc_nlen {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    line-height: 2;
+}
+/* Estilo general para el formulario */
+.formulario-noticia {
+    width: 60%;
+    margin: 20px auto;
+    background-color: rgba(169, 169, 169, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Texto blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los campos de entrada */
+.input-titulo, 
+.textarea-descripcion, 
+.input-imagen {
+    width: 100%; /* Hace que los campos ocupen el ancho completo del contenedor */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(169, 169, 169, 0.8); /* Fondo ligeramente gris */
+    color: #333; /* Texto oscuro para mejor visibilidad */
+    
+}
+
+/* Estilo de las etiquetas */
+.label-titulo, 
+.label-descripcion, 
+.label-imagen {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+/* Estilo del botón de enviar */
+.btn-enviar {
+    background-color: #00cf26; /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%; /* Ancho completo */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón de enviar */
+.btn-enviar:hover {
+    background-color: #009a1f; /* Cambio de color en hover */
+}
+
+/* Respuesta visual de los campos de archivo */
+.input-imagen {
+    background-color: transparent; /* Fondo transparente */
+    color: white;
+    padding: 5px;
+}
+
+/* Estilo para los textos dentro del formulario */
+.textarea-descripcion {
+    height: 150px;
+    font-size: 16px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(169, 169, 169, 0.8); /* Cambia el color del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #383838; /* Color cuando pasas el mouse */
+}
+
+/* Responsivo: cuando la pantalla es pequeña, el formulario se ajusta */
+@media (max-width: 768px) {
+    .formulario-noticia {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+/* Responsivo: cuando la pantalla es muy pequeña, apila los artículos */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post {
+        width: auto; /* Para que no se vean tan angostos en móviles */
+    }
+}
