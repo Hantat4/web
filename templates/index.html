@@ -4,78 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H.D.P.</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
     <header>
-        
-            <h1 class="title_page">Los Mitoteros</h1>
-            <ul class="navegation">
-                <li><a href="{{ url_for('sobre_la_page') }}" class="title">Sobre la page</a></li>
-                    <li><a href="https://www.instagram.com" target="_blank" class="title"> Contacto </a></li> <!---_blank es para abrir en otra page-->
-            </ul>
-        
+        <h1 class="title_page">Los Mitoteros</h1>
+        <ul class="navegation">
+            <li><a href="sobre_la_page.html" class="title">Sobre la page</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" class="title">Contacto</a></li>
+        </ul>
     </header>
     <main>
-        {% for noticia in noticias %}
+
         <article class="post">
-            <h2 class="title">{{ noticia.titulo }}</h2>
-            <p class="date">Publicado hace poco</p>
-            <p class="excerpt">{{ noticia.descripcion }}</p>
-            {% if noticia.imagen_url %}
-                <img src="{{ url_for('static', filename=noticia.imagen_url.split('static/')[1]) }}" alt="Imagen de la noticia">
-            {% endif %}
-            <!-- Botón para borrar noticia -->
-            <form action="{{ url_for('borrar_noticia', index=loop.index0) }}" method="post">
-                <button type="submit" class="btn-borrar">Borrar</button>
-            </form>
-        </article>
-        {% endfor %}
-        
-        <div class="container">
-        <article class="post">
-            
-            <h2><a href="{{ url_for('title') }}" class="title">Matan a balazos a hombre en...</a></h2>
+            <h2 class="title">Matan a balazos a hombre en...</h2>
             <p class="date">Publicado el 28 de marzo de 2025</p>
             <p class="excerpt">blablablablablabla</p>
-            <img src="{{ url_for('static', filename='img/gun.jpg') }}" alt="Imagen de la noticia">
-
-            
+            <img src="static/img/gun.jpg" alt="Imagen de la noticia">
         </article>
-        
+
         <article class="post">
-            <h2><a href="{{ url_for('olim') }}" class="title">Olimpiada de atletismo</a></h2>
+            <h2 class="title">Olimpiada de atletismo</h2>
             <p class="date">Publicado el 27 de marzo de 2025</p>
             <p class="excerpt">Un gran cambio</p>
-            <img src="{{ url_for('static', filename='img/medd.webp') }}" alt="">
+            <img src="static/img/medd.webp" alt="">
         </article>
-        </div>
+
         <article class="postt large-post">
-        <h2><a href="{{ url_for('n_len') }}" class="title">Una nueva etapa: desarrollan un nuevo lenguaje revolucionario... </a></h2>
-        <p class="date">Publicado el 31 de marzo de 2025</p>
-        <p class="excerpt">Sera el fin o el principio de una era..</p>
-        <img src="{{ url_for('static', filename='img/bot.jpg') }}" alt="">
+            <h2 class="title">Una nueva etapa: desarrollan un nuevo lenguaje revolucionario...</h2>
+            <p class="date">Publicado el 31 de marzo de 2025</p>
+            <p class="excerpt">Será el fin o el principio de una era...</p>
+            <img src="static/img/bot.jpg" alt="">
         </article>
     </main>
-    <form action="/procesar_noticia" method="post" enctype="multipart/form-data">
-        <!-- Campo de Título -->
-        <label for="titulo" class="label-titulo">Título de la Noticia:</label>
-        <input type="text" id="titulo" name="titulo" required class="input-titulo">
-        <br><br>
-    
-        <!-- Campo de Descripción -->
-        <label for="descripcion" class="label-descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required class="textarea-descripcion"></textarea>
-        <br><br>
-    
-        <!-- Campo de Imagen (opcional) -->
-        <label for="imagen" class="label-imagen">Imagen (opcional):</label>
-        <input type="file" id="imagen" name="imagen" accept="image/*" class="input-imagen">
-        <br><br>
-    
-        <button type="submit" class="btn-enviar">Enviar Noticia</button>
-    </form>
-    
-    
+
 </body>
 </html>
